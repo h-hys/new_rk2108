@@ -1,0 +1,46 @@
+---- bt Matches (45 in 29 files) ----
+bip_api.h (third_party\cypress\release\BT\libraries\drivers\bluetooth\BTE\Components\stack\include) line 436 :    - used in GetImage, PutImage request (x-bt/img-img) */
+bip_api.h (third_party\cypress\release\BT\libraries\drivers\bluetooth\BTE\Components\stack\include) line 488 :    - used in PutLinkedAttachment request (x-bt/img-attachment) */
+bip_api.h (third_party\cypress\release\BT\libraries\drivers\bluetooth\BTE\Components\stack\include) line 500 :    - response for GetCapabilities function (x-bt/img-capabilities) */
+bip_api.h (third_party\cypress\release\BT\libraries\drivers\bluetooth\BTE\Components\stack\include) line 527 :    - response for GetImagesList function (x-bt/img-listing) */
+bip_api.h (third_party\cypress\release\BT\libraries\drivers\bluetooth\BTE\Components\stack\include) line 535 :    - response for GetImageProperties function (x-bt/img-properties) */
+ble_hello_client.c (third_party\cypress\release\BT\apps\snip\bluetooth\ble_client_server) line 293 :  * hello client bt/ble device and link management callbacks
+ble_hello_client.c (third_party\cypress\release\BT\apps\snip\bluetooth\ble_hello_client) line 144 :  * hello client bt/ble device and link management callbacks
+ble_hello_sensor.c (third_party\cypress\release\BT\apps\demo\dual_hf_a2dp) line 513 :  * hello_sensor bt/ble link management callback
+ble_hello_sensor.c (third_party\cypress\release\BT\apps\snip\bluetooth\ble_hello_sensor) line 554 :  * hello_sensor bt/ble link management callback
+app_thread_entry2 in blsx.c (applications\start_app) : 				rt_kprintf("not connect bt device!, %d\n", rt_tick_get());
+app_thread_entry2 in blsx.c (applications\start_app) : 					rt_kprintf("connect bt, but not doing anything\n");
+app_thread_entry2 in blsx.c (applications\start_app) : 				rt_kprintf("connect bt, doing now!!!\n");
+bt_audio_remote_control_cmd_cback in bluetooth_a2dp.c (third_party\cypress\release\BT\apps\demo\dual_hf_a2dp) :         WPRINT_APP_INFO(("%s: bt addresses don't match\n", __func__));
+bt_audio_remote_control_rsp_cback in bluetooth_a2dp.c (third_party\cypress\release\BT\apps\demo\dual_hf_a2dp) :         WPRINT_APP_INFO(("%s: bt addresses don't match\n", __func__));
+bt_audio_remote_control_cmd_cback in bluetooth_audio.c (third_party\cypress\release\BT\apps\snip\bluetooth_audio) :         WPRINT_APP_INFO(("%s: bt addresses don't match\n", __func__));
+bt_audio_remote_control_rsp_cback in bluetooth_audio.c (third_party\cypress\release\BT\apps\snip\bluetooth_audio) :         WPRINT_APP_INFO(("%s: bt addresses don't match\n", __func__));
+bluetooth_audio_player.c (third_party\cypress\release\BT\apps\snip\bluetooth_audio) line 589 : MSH_CMD_EXPORT(bt_mem, bt mem);
+btm_nvram_access.h (third_party\cypress\release\BT\libraries\drivers\bluetooth\BTE\Components\stack\include) line 5 : **  Description:   Internal definitions wiced bt nv storage call out functions
+btm_sec_nvram.h (third_party\cypress\release\BT\libraries\drivers\bluetooth\BTE\Components\stack\btm) line 5 : **  Description:   This file contains definition of managing link key storage inside bt stack
+usage in bt_api_device.c (examples\bluetooth\bt_api_test) :     rt_kprintf("  -g           get bt local device address\n");
+usage in bt_api_device.c (examples\bluetooth\bt_api_test) :     rt_kprintf("  -s           set bt local device name\n");
+bt_api_device.c (examples\bluetooth\bt_api_test) line 87 : MSH_CMD_EXPORT(bt_api_device, bt bluedroid device api test);
+bt_api_gap.c (examples\bluetooth\bt_api_test) line 136 : MSH_CMD_EXPORT(bt_api_gap, bt bluedroid gap api test);
+usage in bt_api_main_init.c (examples\bluetooth\bt_api_test) :     rt_kprintf("  --reset      reset bt,power up(1)/down(0)\n");
+bt_api_main_init.c (examples\bluetooth\bt_api_test) line 201 : MSH_CMD_EXPORT(bt_api_main, bt bluedroid main api test);
+bt_discovery.c (examples\bluetooth\bt_discovery\main) line 376 : MSH_CMD_EXPORT(app_main_bt_discovrey, bt discovrey);
+bt_device_scan in bt_test_page.c (applications\pcba_test) :     LOG_D("Unsupport bt tyte.");
+bt_startup_init in bt_test_page.c (applications\pcba_test) :         LOG_D("Create bt start task OK");
+bt_startup_init in bt_test_page.c (applications\pcba_test) :     LOG_E("Create bt start task failed");
+bt_page_init in bt_test_page.c (applications\pcba_test) :     /* create bt start task to scan.*/
+bt_trace.h (third_party\bt\bluedroid\common\include\common) line 60 :     #define assert(x)   do { if (!(x)) BT_PRINT_E(TAG, "bt host error %s %u\n", __FILE__, __LINE__); } while (0)
+fw_sn_read in fwanalysis_test.c (bsp\rockchip\common\tests) :             rt_kprintf("\nnot find bt mac address! \n");
+main_page.c (applications\pcba_test) line 77 :     {ITEM_BT,       NULL,      "bt test", bt_test_cb    },
+observer.h (applications\rk_iot_app\cutils\sys_ctrl) line 92 :  *         observer_init(&bt.obs, ...);
+platform_dct.h (third_party\cypress\bsp\bt\wiced_rtt_inc) line 36 :  *    If you are adding an "optional" structure, see how bt, p2p, and ota2 are handled below using flags to indicate
+platform_dct.h (third_party\cypress\bsp\bt\wiced_rtt_inc) line 687 :  * platform_dct_old_sdk.h files and make sure the old bt structure
+result_page.c (applications\pcba_test) line 38 :     "bt test :"
+rk_bt.h (third_party\bt\include) line 127 : #define BT_CONTROLLER_INIT_CONFIG_DEFAULT() {0}; _Static_assert(0, "please enable bluetooth in menuconfig to use bt.h");
+rk_bt_defs.h (third_party\bt\bluedroid\api\include\api) line 59 : /*Define the bt octet 16 bit size*/
+timers.c (components\benchmark\dhrystone) line 83 : /*  HP-UX Addition by: Bo Thide', bt@irfu.se         */
+userial_rk.c (third_party\cypress\bsp\bt\rk2108) line 1398 : static void bt()
+userial_rk.c (third_party\cypress\bsp\bt\rk2108) line 1402 : MSH_CMD_EXPORT(bt, start Bluetooth);
+wiced_bt_int.h (third_party\cypress\release\BT\libraries\drivers\bluetooth\BTE\WICED) line 5 : **  Description:   Internal definitions for wiced bt wrapper
+wiced_bt_nvram_access.h (third_party\cypress\release\BT\libraries\drivers\bluetooth\include) line 5 : **  Description:   Internal definitions wiced bt nv storage call out functions
+wiced_wifi.h (third_party\cypress\release\WIFI\include) line 1168 : /** @addtogroup wifi-bt-comm    Wifi-BT communication functions

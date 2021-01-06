@@ -1,0 +1,72 @@
+# Kconfig file for package LittlevGL2RTT v6.1.2
+menuconfig RT_USING_LITTLEVGL2RTT
+    bool "LittlevGL2RTT: The LittlevGl release v6.1.2 gui lib adapter RT-Thread"
+    default n
+    depends on !PKG_USING_LITTLEVGL2RTT
+
+if RT_USING_LITTLEVGL2RTT
+
+    menu "LittlevGL2RTT Component Options"
+        choice
+            prompt "Memory management mode"
+            default RT_LV_MEM_DYNAMIC
+
+            config RT_LV_MEM_STATIC
+                bool "static"
+            config RT_LV_MEM_DYNAMIC
+                bool "dynamic"
+        endchoice
+        config RT_LV_MEM_CUSTOM
+            int
+            default 0 if RT_LV_MEM_STATIC
+            default 1 if RT_LV_MEM_DYNAMIC
+
+        choice
+            prompt "Color depth"
+            default RT_LV_COLOR_DEPTH_16
+
+            config RT_LV_COLOR_DEPTH_1
+                bool "1bit"
+            config RT_LV_COLOR_DEPTH_8
+                bool "8bit"
+            config RT_LV_COLOR_DEPTH_16
+                bool "16bit"
+            config RT_LV_COLOR_DEPTH_24
+                bool "24bit"
+        endchoice
+        config RT_LV_COLOR_DEPTH
+            int
+            default 1  if RT_LV_COLOR_DEPTH_1
+            default 8  if RT_LV_COLOR_DEPTH_8
+            default 16 if RT_LV_COLOR_DEPTH_16
+            default 24 if RT_LV_COLOR_DEPTH_24
+
+        config RT_LV_MEM_KB_SIZE
+            int "Memory Size used by 'lv_mem_alloc'(KB)"
+            range 2 65536
+            default 32
+            depends on RT_LV_MEM_STATIC
+
+        config RT_LV_MEM_AUTO_DEFRAG
+            int "Automatically defrag on free"
+            default 1
+            range 0 1
+            depends on RT_LV_MEM_STATIC
+
+        config RT_LV_HOR_RES
+            int "horizontal pixels"
+            default 480
+        config RT_LV_VER_RES
+            int "vertical pixels"
+            default 272
+        config RT_LV_DPI
+            int "DPI(dot per inch)"
+            default 50
+    endmenu
+
+    config RT_LV_USING_DEMO
+        bool
+        prompt "LittlevGL2RTT demo example"
+        default n
+
+endif

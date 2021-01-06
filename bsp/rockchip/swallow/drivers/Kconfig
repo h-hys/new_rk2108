@@ -1,0 +1,62 @@
+source "$BSP_DIR/../common/drivers/Kconfig"
+
+menu "RT-Thread rockchip swallow drivers"
+
+config IS_FPGA
+    bool "Run in FPGA"
+    default n
+
+config RT_USING_CRU
+    bool "Enable CRU"
+    default n
+
+config RT_USING_PMU
+    bool "Enable PMU"
+    default n
+
+if RT_USING_PWM
+config RT_USING_PWM0
+    bool "Enable PWM0"
+    default n
+endif
+
+menu "Enable UART"
+    config RT_USING_UART
+        bool "Enable UART"
+        default n
+
+    if RT_USING_UART
+    config RT_USING_UART0
+        bool "Enable UART0"
+        default n
+    endif
+endmenu
+
+if RT_USING_I2C
+menu "Enable I2C"
+    config RT_USING_I2C0
+        bool "Enable I2C0"
+        default n
+
+    config RT_USING_I2C1
+        bool "Enable I2C1"
+        default n
+
+endmenu
+endif
+
+if RT_USING_SPI
+menu "Enable SPI"
+    config RT_USING_SPI2APB
+        bool "Enable SPI0 (SPI2APB)"
+        default n
+
+    config RT_USING_SPI1
+        bool "Enable SPI1"
+        default n
+
+endmenu
+endif
+
+endmenu
+
